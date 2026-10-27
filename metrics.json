@@ -1,0 +1,62 @@
+{
+  "test_transactions": 5047,
+  "test_fraud": 468,
+  "quantum_train_samples": 300,
+  "quantum_kernel_scale": 0.15,
+  "quantum_C": 4.0,
+  "quantum_cv_auc": 0.9591,
+  "quantum_train_fraud": 150,
+  "models": [
+    {
+      "model": "Quantum kernel SVM (4 qubits)",
+      "roc_auc": 0.9718,
+      "precision": 0.8311,
+      "recall": 0.7991,
+      "f1": 0.8148
+    },
+    {
+      "model": "Classical RBF SVM (same 4 features)",
+      "roc_auc": 0.9753,
+      "precision": 0.9323,
+      "recall": 0.765,
+      "f1": 0.8404
+    },
+    {
+      "model": "Classical gradient boosting (8 raw features)",
+      "roc_auc": 0.9943,
+      "precision": 0.9279,
+      "recall": 0.9081,
+      "f1": 0.9179
+    },
+    {
+      "model": "Behavioural score only",
+      "roc_auc": 0.9703,
+      "precision": 0.9091,
+      "recall": 0.7479,
+      "f1": 0.8206
+    },
+    {
+      "model": "Fusion with classical SVM instead of quantum",
+      "roc_auc": 0.9864,
+      "precision": 0.9212,
+      "recall": 0.8248,
+      "f1": 0.8703
+    },
+    {
+      "model": "Hybrid fusion (quantum + behavioural + risk)",
+      "roc_auc": 0.9849,
+      "precision": 0.907,
+      "recall": 0.8333,
+      "f1": 0.8686
+    }
+  ],
+  "thresholds": {
+    "verify": 0.466,
+    "hold": 0.536
+  },
+  "decisions": {
+    "fraud_caught_pct": 87.0,
+    "fraud_held_pct": 79.9,
+    "legit_friction_pct": 3.52
+  }
+}

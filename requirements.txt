@@ -1,0 +1,7 @@
+numpy
+pandas
+scikit-learn
+joblib
+fastapi
+uvicorn
+qiskit        # optional: only needed for backend="qiskit", circuit drawing and verify_against_qiskit()
